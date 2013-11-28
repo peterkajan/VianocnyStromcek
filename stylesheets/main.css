@@ -1,0 +1,380 @@
+body{
+  font-family: Verdana, Tahoma, sans-serif;
+  background-repeat:no-repeat;
+  background-position:center top;
+  background-color:#FFFFFF;
+}
+
+
+body.reg{
+  margin-top:0px;
+  font-family: Verdana, Tahoma, sans-serif;
+  background-repeat:repeat-y;
+  background-position:center top;
+  background-color:black;
+}
+
+body.res
+{
+ font-family: Verdana, Tahoma, sans-serif;
+  background-image:url('../images/bgres.png');
+  background-repeat:repeat-y;
+  background-position:center top;
+  background-color:#FFFFFF;
+  margin: 0;
+}
+
+
+body.ankete{
+  margin-top:0px;
+  font-family: Verdana, Tahoma, sans-serif;
+  background-repeat:repeat-y;
+  background-position:center top;
+  background-color:black;
+}
+
+
+
+body.intro
+{
+   font-family: Verdana, Tahoma, sans-serif;
+   background-image:no-image;
+   background-repeat:no-repeat;
+   background-position:center top;
+   background-color:black;
+}
+
+/* error styles input, select and radio boxes */
+
+textarea.error,
+input.error
+{
+  outline: solid 1px red;
+}
+
+select.error
+{
+ outline: solid 1px red;   
+}
+
+div.radioerror
+{
+  border: solid 1px;
+  border-color: red; 
+  clear: both;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  width: 220px;
+  height:auto;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+/* style for disabled divs (when distance < 90km) */
+div.disabled
+{
+  opacity:0.4;
+  filter:alpha(opacity=40);
+}
+/* style for disabled inputs (hoover and focus color change turned off) */
+
+input.disabled:hover ,
+input.disabled:focus , 
+textarea.disabled:hover ,
+textarea.disabled:focus 
+{   
+  border-color: #D6944B;
+}  
+
+/* text inputs */
+input, textarea {   
+    display: inline;
+    position: relative;
+    padding: 4px;  
+    outline: 0;  
+    font: normal 13px/100% Verdana, Tahoma, sans-serif;  
+    width: 150px;  
+    background-color: black;
+    border: solid 3px #D6944B;
+    color: #D6944B;
+  
+  /*
+    background: #FFFFFF url('../images/bg_form.png') left top repeat-x;  
+    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #BEBEBE), to(#FFFFFF));  
+    background: -moz-linear-gradient(top, #FFFFFF, #BEBEBE 1px, #FFFFFF 25px);  
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
+    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
+    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;        
+  */
+/*  -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px; 
+*/    
+}  
+
+
+textarea 
+{   
+    width: 150px;
+    max-width: 150px;
+    max-height: 40px;  
+}  
+    
+input.radiobutton
+{
+    width: 20px;
+    border: 0px;
+   
+}              
+                                   
+input:hover, textarea:hover,  
+input:focus, textarea:focus {   
+    border-color: #e6be93;     
+}
+    
+input.check
+{
+    width: 20px;
+    border: 0px;
+}
+
+select
+{
+   border: solid 3px #D6944B;
+   background-color: black;
+   color: #D6944B; 
+}
+
+/*select option 
+{
+    
+    : #D6944B; 
+    color: black;
+}
+
+input[type="select"]:selected 
+{
+    background: #D6944B; 
+    color: black;
+} */  
+
+
+
+input.startbutton
+{
+   
+  display: block; 
+  margin: auto; 
+  width:80px;
+  height:30px;
+  padding: 0px;
+  font-size: 14px;
+  background: black;
+  border: solid 3px #D6944B;
+  color: #D6944B;
+  font-weight: bold;
+  
+   /*
+    padding: 4px;  
+    border: solid 1px #D6944B;  
+    outline: 0;  
+    background: #FFFFFF url('../images/bg_form.png') left top repeat-x;  
+    background: -webkit-gradient(linear, left top, left 25, from(#D6944B), color-stop(4%, #8F6332), to(#543A1D));  
+    background: -moz-linear-gradient(top, #D6944B, #8F6332 1px, #543A1D 25px);  
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
+    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
+    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
+    */
+}
+
+input.startbutton:hover,  
+input.startbutton:focus 
+{   
+    border-color: #e6be93;     
+}  
+
+.form label {   
+    margin-left: 5px;   
+    color:  #e6be93;  
+    font-size: 12px; 
+    }  
+    
+.ankete label {   
+    margin-left: 5px;   
+    color:  #e6be93;  
+    font-size: 12px; 
+    }    
+  
+/*.submit input {  
+    width: auto;  
+    padding: 9px 15px;  
+    background: #617798;   
+    font-size: 14px;  
+    color: #FFFFFF;  
+    -moz-border-radius: 5px;  
+    -webkit-border-radius: 5px;  
+    } 
+  */
+
+
+div.introcenter
+{
+  clear: left;
+  font-size: 14px; 
+  text-align: center;
+  display: block;
+  color: #D6944B; 
+  margin-left: auto;
+}
+
+div.fline
+{
+  font-size: 14px; 
+  text-align: center;
+  display:inline;
+  color: #D6944B; 
+  margin-left: 50px;
+  margin-right: 50px;
+  float: left;
+}
+
+
+div.form
+{
+	margin-top: 0px;
+	padding: 0px;
+	width: 480px;
+  height: 760px;
+	margin-left: auto ;
+	margin-right: auto ;
+}
+
+div.ankete
+{
+  margin-top: 10px;
+	padding: 35px;
+	width: 500px;
+  height: 760px;
+	margin-left: auto ;
+	margin-right: auto ;
+}
+
+.notes
+{                    
+ width: 250px;  
+ margin-right: 50%;
+ margin-left: 300px;
+ display:table-cell; 
+ float:left;
+ font-size: 11px;
+ color: #e6be93;
+ text-align: justify;
+}
+
+div.instructions
+{
+ font-size: 11px;
+ color: #e6be93;
+ text-align: justify;
+}
+
+div.nadpis
+{
+  clear: both;
+  margin-top: 0px;
+  margin-bottom: 3px;
+	padding-bottom: 0px;
+  color: #D6944B;
+  font-size: 14px;
+
+}
+
+div.restext
+{ 
+ font-size: 13px;
+ border: solid 3px #D6944B;
+ color: #D6944B;
+ display:block; 
+ padding: 10px;
+ margin-left:-250px; 
+ margin-top: 10px;
+ width:500px; 
+ position:fixed; 
+ left:50%;
+ background: black;
+ z-index: 9999;
+ text-align: justify;
+}
+ 
+div.other
+{
+  clear: both;
+  margin-top: 0px;
+  margin-bottom: 10px;
+	padding-bottom: 10px;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+img.dark
+{
+  opacity:0.1;
+  filter:alpha(opacity=10);
+}
+
+div.characters
+{
+	padding-top: 168px;
+}
+
+img.characters
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+img.nadpis
+{
+  margin-top:0;
+  padding-top:0;
+  display: block;
+  margin-left: auto ;
+	margin-right: auto ;
+}
+
+
+.errorMsg
+{ 
+    font-size: 11px;
+    color: red ;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+div.loaderCanvas {
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	position: fixed;
+	display: none;
+	z-index: 9999;
+	cursor: wait;	
+}
+
+.loader {
+	position: fixed;
+	margin-top: -120px;
+	margin-left: -250px;
+	left: 50%;
+	top: 50%;
+	cursor: wait;	
+}
+
+.restext h4 {
+    margin-top: 0px;
+    margin-bottom: 8px;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+	<head>
+		<title>Vianočný stromček</title>
+		<link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
+		<script src="js/main.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<div>
+			<p>Ahoj {{p.firstname}} {{p.lastname}}</p>
+		</div>
+		<div class="form">
+			<form action="/" method="post">
+
+				<div class="errorMsg">
+					{% for error in errors %}
+					{{error}}
+					<br/>
+					{% endfor %}
+				</div>
+
+				<div class="other">
+					<input maxlength="200" type="hidden" name="firstname" value="{{p.firstname}}"/>
+					<input maxlength="200" type="hidden" name="lastname" value="{{p.lastname}}"/>
+
+					<div class="residence">
+			  			<textarea maxlength="200" rows="2" cols="18" name="residence" class="{% if 'residence' in errorIds %}error{% endif%}">{{p.residence}}</textarea>
+						<label for="residence">Adresa doručenia</label>
+					</div>
+			
+					<div class="phone">
+						<input maxlength="200" type="text" name="phone" id="phone" value="{{p.phone}}" {% if 'phone' in errorIds %}class="error" {% endif%}/>
+						<label for="phone">Telefónne číslo</label>
+					</div>
+					
+					<div class="date">
+						<select id="date" name="date" class="{% if 'date' in errorIds %}error{% endif%}">
+							<option value="" disabled="disabled" selected="selected">-- Vyberte deň --</option>
+							<option value="piatok" {% if p.date == 'piatok' %} selected="selected" {% endif %}>Piatok</option>
+							<option value="sobota" {% if p.date == 'sobota' %} selected="selected" {% endif %}>Sobota</option>
+						</select>
+						<label for="date">Ďeň doručenia</label>
+					</div>
+				
+					<div class="time">
+						<select id="time" name="time" class="{% if 'time' in errorIds %}error{% endif%}">
+							<option value="" disabled="disabled" selected="selected">-- Vyberte čas --</option>
+							<option value="doobeda" {% if p.time == 'doobeda' %} selected="selected" {% endif %}>Doobeda</option>
+							<option value="poobede" {% if p.time == 'poobede' %} selected="selected" {% endif %}>Poobede</option>
+						</select>
+						<label for="time">Čas doručenia</label>
+					</div>
+
+					<div>
+						<input type="submit" value="Ďalej"/>
+					</div>
+				</div>
+	 		</form>
+  		</div>
+  		
+  		<script>
+	        var onLostFocus = function() 
+			{  
+				if ($(this).val())
+				{
+					$(this).removeClass("error");
+					$(this).addClass("correct");
+				}
+					
+					
+			    if ( indexOf.call(workpacesWithAcc,  $('select.workplace').val()) == -1)
+			    {                                                                               // without accommodation
+			        $("input.accomCheck").prop('disabled',true);
+			        $(".accomCheck").addClass("disabled");
+			        disableAccFields()
+			    }
+			    else
+			    {
+			        $("input.accomCheck").prop('disabled',false);
+			        $(".accomCheck").removeClass("disabled");
+			        checkAccFields()
+			    }
+			};
+	        
+	        $('input select').blur( onLostFocus );
+	    </script>
+  </body>
+</html>
+{% endautoescape %}
