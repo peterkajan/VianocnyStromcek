@@ -57,6 +57,12 @@ select.error
  outline: solid 1px red;   
 }
 
+.correct
+{
+	outline: solid 1px green; 
+}
+
+
 div.radioerror
 {
   border: solid 1px;

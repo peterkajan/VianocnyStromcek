@@ -30,6 +30,12 @@ def getUnenteredMsg( value ):
     return ERROR_NOT_ENTERED % (labels[ value ],)
 
 
+def createTestEmployee():
+    empl = Employee()
+    empl.firstname = 'jozko'
+    empl.lastname = 'mrkvicka'
+    empl.put()
+    
 class MainPage(BaseHandler):
 
     def displayPage(self, params, errors=[], errorIds=[]):
@@ -42,6 +48,9 @@ class MainPage(BaseHandler):
         self.response.write(template.render(template_values))
         
     def get(self):
+        #uncomment this to create test client in local repository on get request
+        #createTestEmployee()
+        
         keyUrl = self.request.get('key')
         if not keyUrl:
             self.abort(404)
