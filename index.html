@@ -69,20 +69,12 @@
 					$(this).removeClass("error");
 					$(this).addClass("correct");
 				}
-					
-					
-			    if ( indexOf.call(workpacesWithAcc,  $('select.workplace').val()) == -1)
-			    {                                                                               // without accommodation
-			        $("input.accomCheck").prop('disabled',true);
-			        $(".accomCheck").addClass("disabled");
-			        disableAccFields()
-			    }
-			    else
-			    {
-			        $("input.accomCheck").prop('disabled',false);
-			        $(".accomCheck").removeClass("disabled");
-			        checkAccFields()
-			    }
+				else
+				{
+					$(this).removeClass("correct");
+					$(this).addClass("error");
+				}
+				
 			};
 	        
 	        $('input select').blur( onLostFocus );
