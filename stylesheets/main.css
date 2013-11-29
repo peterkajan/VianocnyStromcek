@@ -1,55 +1,51 @@
-body{
-  font-family: Verdana, Tahoma, sans-serif;
-  background-repeat:no-repeat;
-  background-position:center top;
-  background-color:#FFFFFF;
-}
-
-
-body.reg{
-  margin-top:0px;
-  font-family: Verdana, Tahoma, sans-serif;
-  background-repeat:repeat-y;
-  background-position:center top;
-  background-color:black;
-}
-
-body.res
+body
 {
- font-family: Verdana, Tahoma, sans-serif;
-  background-image:url('../images/bgres.png');
-  background-repeat:repeat-y;
-  background-position:center top;
-  background-color:#FFFFFF;
-  margin: 0;
+	@font-face
+ 	{
+		font-family: boton;
+		src: url('../fonts/boton.otf'),
+ 	} 
+
+	font-family: boton, Tahoma, sans-serif;
+	background-repeat:no-repeat;
+	background-position:center top;
+	background-color:#FFFFFF;
+	margin: 0px;
 }
 
 
-body.ankete{
-  margin-top:0px;
-  font-family: Verdana, Tahoma, sans-serif;
-  background-repeat:repeat-y;
-  background-position:center top;
-  background-color:black;
-}
-
-
-
-body.intro
+h1
 {
-   font-family: Verdana, Tahoma, sans-serif;
-   background-image:no-image;
-   background-repeat:no-repeat;
-   background-position:center top;
-   background-color:black;
+	font-size: 80px;
+	color: white;
+	padding-bottom:0px;
+	margin-bottom:0px;
 }
+
+.borderLine 
+{
+	padding-top: 0px;
+    width: 25%;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 2px solid rgb(230, 60, 60);
+}
+
+div.title
+{
+	background-color: #59C8E3; 
+	height: 300px;
+	text-align: center;
+	padding-top: 30px;
+}
+
 
 /* error styles input, select and radio boxes */
-
 textarea.error,
 input.error
 {
-  outline: solid 1px red;
+	outline: solid 1px red;
 }
 
 select.error
@@ -218,26 +214,9 @@ input.startbutton:focus
   */
 
 
-div.introcenter
-{
-  clear: left;
-  font-size: 14px; 
-  text-align: center;
-  display: block;
-  color: #D6944B; 
-  margin-left: auto;
-}
 
-div.fline
-{
-  font-size: 14px; 
-  text-align: center;
-  display:inline;
-  color: #D6944B; 
-  margin-left: 50px;
-  margin-right: 50px;
-  float: left;
-}
+
+
 
 
 div.form
@@ -260,92 +239,22 @@ div.ankete
 	margin-right: auto ;
 }
 
-.notes
-{                    
- width: 250px;  
- margin-right: 50%;
- margin-left: 300px;
- display:table-cell; 
- float:left;
- font-size: 11px;
- color: #e6be93;
- text-align: justify;
-}
+	
 
-div.instructions
-{
- font-size: 11px;
- color: #e6be93;
- text-align: justify;
-}
 
 div.nadpis
 {
   clear: both;
   margin-top: 0px;
   margin-bottom: 3px;
-	padding-bottom: 0px;
+  padding-bottom: 0px;
   color: #D6944B;
   font-size: 14px;
 
 }
 
-div.restext
-{ 
- font-size: 13px;
- border: solid 3px #D6944B;
- color: #D6944B;
- display:block; 
- padding: 10px;
- margin-left:-250px; 
- margin-top: 10px;
- width:500px; 
- position:fixed; 
- left:50%;
- background: black;
- z-index: 9999;
- text-align: justify;
-}
+
  
-div.other
-{
-  clear: both;
-  margin-top: 0px;
-  margin-bottom: 10px;
-	padding-bottom: 10px;
-  color: #FFFFFF;
-  font-size: 14px;
-}
-
-img.dark
-{
-  opacity:0.1;
-  filter:alpha(opacity=10);
-}
-
-div.characters
-{
-	padding-top: 168px;
-}
-
-img.characters
-{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-img.nadpis
-{
-  margin-top:0;
-  padding-top:0;
-  display: block;
-  margin-left: auto ;
-	margin-right: auto ;
-}
-
-
 .errorMsg
 { 
     font-size: 11px;

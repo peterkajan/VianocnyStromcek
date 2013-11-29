@@ -18,7 +18,7 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 
 ERROR_NOT_ENTERED = u'Zabudli ste vyplniť pole %s'
 ERROR_WRONG_PHONE = u'Nesprávne telefónne číslo. Povolené znaky sú: +, -, 0-9, /, \, medzera'
-
+ 
 labels = {
          'residence' : u'Adresa',
          'phone' : u'Telefónne číslo',
@@ -42,6 +42,11 @@ class MainPage(BaseHandler):
         self.response.write(template.render(template_values))
         
     def get(self):
+        #empl = Employee()
+        #empl.firstname = 'Katka'
+        #empl.lastname = 'Kutlikova'
+        #empl.put()
+   
         keyUrl = self.request.get('key')
         if not keyUrl:
             self.abort(404)
