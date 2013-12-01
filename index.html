@@ -18,10 +18,10 @@
 
 		<div class="mainText">	
 			<p>
-				Milá {{p.firstname}}
+				{% if p.sex=='m' %}Milý{% else %}Milá{% endif %} {{p.firstname}}
 				<br>
 				Obľúb si s nami po predvianočnom strese opäť Vianoce! Pretože z Brand- u Ti ich prajeme hlavne bezstarostné 
-				Aby si videl/a, že to myslíme vážne, postaráme sa o to, aby si naozaj mal/a o jednu starosť menej!
+				Aby si videl{% if p.sex=='f' %}a{% endif %}, že to myslíme vážne, postaráme sa o to, aby si naozaj mal{% if p.sex=='f' %}a{% endif %} o jednu starosť menej!
 				Z Brand-u sme pre Teba vyexpedovali voňavú vianočnú jedličku, ktorú Ti doručíme priamo do obývačky.
  			</p>
 		</div>
@@ -38,7 +38,8 @@
 				<div class="other">
 					<input maxlength="200" type="hidden" name="firstname" value="{{p.firstname}}"/>
 					<input maxlength="200" type="hidden" name="lastname" value="{{p.lastname}}"/>
-
+					<input maxlength="200" type="hidden" name="sex" value="{{p.sex}}"/>
+					
 					<div class="residence">
 			  			<textarea maxlength="200" rows="2" cols="18" name="residence" class="validate{% if 'residence' in errorIds %} error{% endif%}">{{p.residence}}</textarea>
 						<label for="residence">Adresa doručenia</label>

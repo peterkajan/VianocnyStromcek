@@ -33,6 +33,7 @@ def createTestEmployee():
     empl = Employee()
     empl.firstname = 'jozko'
     empl.lastname = 'mrkvicka'
+    empl.sex ='m'
     empl.put()
     
 class MainPage(BaseHandler):
@@ -64,6 +65,7 @@ class MainPage(BaseHandler):
         params = {}
         params['firstname'] = empl.firstname
         params['lastname'] = empl.lastname
+        params['sex'] = empl.sex
         self.displayPage( empl )        
         
        

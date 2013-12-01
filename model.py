@@ -10,5 +10,6 @@ class Employee(ndb.Model):
     phone = ndb.StringProperty(default = '')
     date = ndb.StringProperty(default = '')
     time = ndb.StringProperty(default = '')
+    sex = ndb.StringProperty(choices = ['m', 'f'])
     lastUpdate = ndb.DateTimeProperty('Last changed (UTC)', auto_now = True)
     # timestamp TODO
