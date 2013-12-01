@@ -3,11 +3,11 @@ body
 	@font-face
  	{
 		font-family: boton;
-		src: url('../../fonts/boton.otf'),
+		src: url('../fonts/boton.otf'),
  	} 
 
 	font-family: boton, Tahoma, sans-serif;
-	background-image: url('../img/tree.png');
+	background-image: url('../img/bg.png');
 	background-repeat:no-repeat;
 	background-position:center top;
 	background-color:#FFFFFF;
@@ -17,8 +17,9 @@ body
 
 h1
 {
+	font-family: boton, Tahoma, sans-serif;
 	font-size: 80px;
-	color: red;
+	color: #9F1600;
 	padding-bottom:0px;
 	margin-bottom:0px;
 }
@@ -30,13 +31,13 @@ h1
     margin-top: 5px;
     margin-left: auto;
     margin-right: auto;
-    border-top: 2px solid rgb(230, 60, 60);
+    border-top: 2px solid #9F1600;
 }
 
 div.title
 {
-	background-color: white; 
-	height: 300px;
+	 
+	margin-right: 200px;
 	text-align: center;
 	padding-top: 30px;
 }
@@ -46,17 +47,25 @@ div.title
 textarea.error,
 input.error
 {
-	outline: solid 1px red;
+	box-shadow: 0px 0px 3pt 2pt red;
+	-moz-box-shadow: 0px 0px 3pt 2pt red;
+    -webkit-box-shadow: 0px 0px 3pt 2pt red;
+	
 }
 
 select.error
 {
-	outline: solid 1px red;   
+	box-shadow: 0px 0px 3pt 2pt red;
+	-moz-box-shadow: 0px 0px 3pt 2pt red;
+    -webkit-box-shadow: 0px 0px 3pt 2pt red;
 }
 
 .correct
 {
-	outline: solid 1px green; 
+	box-shadow: 0px 0px 3pt 2pt green;
+	-moz-box-shadow: 0px 0px 3pt 2pt green;
+    -webkit-box-shadow: 0px 0px 3pt 2pt green;
+	
 }
 
 
@@ -67,14 +76,15 @@ select.error
 input, textarea {   
     display: inline;
     position: relative;
+    margin: 15px;
     padding: 4px;  
     outline: 0;  
     font: normal 20px/100% Verdana, Tahoma, sans-serif;  
-    width: 400px;  
-    height: 100px;
+    width: 300px;  
+    height: 80px;
     background-color: white;
-    border: solid 3px black;
-    color: black;
+    border: solid 3px #115404;
+    color: #227400;
   
   /*
     background: #FFFFFF url('../images/bg_form.png') left top repeat-x;  
@@ -93,29 +103,40 @@ input, textarea {
 
 textarea 
 {   
-    width: 150px;
-    max-width: 150px;
-    max-height: 40px;  
+
+    width: 300px;  
+    height: 80px;
+    max-width: 300px;
+    max-height: 80px;  
 }  
     
               
                                    
 input:hover, textarea:hover,  
 input:focus, textarea:focus {   
-    border-color: blue;     
+    box-shadow: 0px 0px 3pt 2pt #5B8C0D;
+	-moz-box-shadow: 0px 0px 3pt 2pt #5B8C0;
+    -webkit-box-shadow: 0px 0px 3pt 2pt #5B8C0;     
 }
     
 
 
 select
-{
-   border: solid 3px black;
-   background-color: white;
-   color: black; 
+{	
+	width: 313px;  
+    height: 80px;
+    margin: 15px;
+	border: solid 3px #115404;
+	background-color: white;
+	font: normal 20px/100% Verdana, Tahoma, sans-serif; 
+	color: #227400;
+	-webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px;  
 }
 
 
-input.startbutton
+/*input.startbutton
 {
    
   display: block; 
@@ -129,14 +150,14 @@ input.startbutton
   color: #D6944B;
   font-weight: bold;
   
-   /*
+   
     padding: 4px;  
     border: solid 1px #D6944B;  
     outline: 0;  
     background: #FFFFFF url('../images/bg_form.png') left top repeat-x;  
     background: -webkit-gradient(linear, left top, left 25, from(#D6944B), color-stop(4%, #8F6332), to(#543A1D));  
     background: -moz-linear-gradient(top, #D6944B, #8F6332 1px, #543A1D 25px);
-    */
+    
      
     box-shadow: rgba(0,0,255, 0.1) 0px 0px 8px;  
     -moz-box-shadow: rgba(0,0,255, 0.1) 0px 0px 8px;  
@@ -148,19 +169,15 @@ input.startbutton:hover,
 input.startbutton:focus 
 {   
     border-color: #e6be93;     
-}  
+}*/  
 
 .form label {   
     margin-left: 5px;   
-    color:  black;  
-    font-size: 30px; 
+    color:  #9F1600;  
+    font-size: 16px; 
     }  
     
-.ankete label {   
-    margin-left: 5px;   
-    color:  black;  
-    font-size: 30px; 
-    }    
+
   
 /*.submit input {  
     width: auto;  
@@ -190,13 +207,7 @@ div.form
 }
 
 
-	
 
-
-
-
-
- 
 .errorMsg
 { 
     font-size: 11px;
