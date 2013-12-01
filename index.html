@@ -4,12 +4,19 @@
 	<head>
 		<title>Vianočný stromček</title>
 		<link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
-		<script src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
 		<script src="js/main.js" type="text/javascript"></script>
 	</head>
 
 	<body>
-		<div>
+
+		<div class="title">
+			<h1>PF 2014</h1>
+			<div class="borderLine"></div>	
+		</div>
+		
+
+		<div>	
 			<p>Ahoj {{p.firstname}} {{p.lastname}}</p>
 		</div>
 		<div class="form">
@@ -62,22 +69,38 @@
   		</div>
   		
   		<script>
-	        var onLostFocus = function() 
-			{  
-				if ($(this).val())
+	        var isValid = function( control )
+	        {
+	        	if ( $(control).attr('id') == "phone" )
 				{
-					$(this).removeClass("error");
-					$(this).addClass("correct");
+					return /^[\+\\\-/0-9 ]+$/.test($(control).val());
 				}
 				else
 				{
-					$(this).removeClass("correct");
-					$(this).addClass("error");
+					return $(control).val()
 				}
-				
-			};
+	        }
 	        
-	        $('input, select, textarea').blur( onLostFocus );
+	        var onLostFocus = function( control ) 
+			{  
+				if ( isValid(control) )
+				{
+					$(control).removeClass("error");
+					$(control).addClass("correct");
+				}
+				else
+				{
+					$(control).removeClass("correct");
+					$(control).addClass("error");
+				}				
+			};
+			
+			$("input, select, textarea").each(function(){
+  				onLostFocus( this );    
+			}).blur( function(){
+	        	onLostFocus( this );
+	        });
+	      
 	    </script>
   </body>
 </html>
