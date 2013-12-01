@@ -51,7 +51,7 @@ input.error
 
 select.error
 {
- outline: solid 1px red;   
+	outline: solid 1px red;   
 }
 
 .correct
@@ -60,35 +60,8 @@ select.error
 }
 
 
-div.radioerror
-{
-  border: solid 1px;
-  border-color: red; 
-  clear: both;
-  margin-bottom: 10px;
-  padding-bottom: 6px;
-  padding-top: 6px;
-  width: 220px;
-  height:auto;
-  color: #FFFFFF;
-  font-size: 14px;
-}
 
-/* style for disabled divs (when distance < 90km) */
-div.disabled
-{
-  opacity:0.4;
-  filter:alpha(opacity=40);
-}
-/* style for disabled inputs (hoover and focus color change turned off) */
 
-input.disabled:hover ,
-input.disabled:focus , 
-textarea.disabled:hover ,
-textarea.disabled:focus 
-{   
-  border-color: #D6944B;
-}  
 
 /* text inputs */
 input, textarea {   
@@ -96,11 +69,12 @@ input, textarea {
     position: relative;
     padding: 4px;  
     outline: 0;  
-    font: normal 13px/100% Verdana, Tahoma, sans-serif;  
-    width: 150px;  
-    background-color: black;
-    border: solid 3px #D6944B;
-    color: #D6944B;
+    font: normal 20px/100% Verdana, Tahoma, sans-serif;  
+    width: 400px;  
+    height: 100px;
+    background-color: white;
+    border: solid 3px black;
+    color: black;
   
   /*
     background: #FFFFFF url('../images/bg_form.png') left top repeat-x;  
@@ -110,10 +84,10 @@ input, textarea {
     -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
     -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;        
   */
-/*  -webkit-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
     -moz-border-radius: 5px; 
     border-radius: 5px; 
-*/    
+    
 }  
 
 
@@ -124,44 +98,21 @@ textarea
     max-height: 40px;  
 }  
     
-input.radiobutton
-{
-    width: 20px;
-    border: 0px;
-   
-}              
+              
                                    
 input:hover, textarea:hover,  
 input:focus, textarea:focus {   
-    border-color: #e6be93;     
+    border-color: blue;     
 }
     
-input.check
-{
-    width: 20px;
-    border: 0px;
-}
+
 
 select
 {
-   border: solid 3px #D6944B;
-   background-color: black;
-   color: #D6944B; 
+   border: solid 3px black;
+   background-color: white;
+   color: black; 
 }
-
-/*select option 
-{
-    
-    : #D6944B; 
-    color: black;
-}
-
-input[type="select"]:selected 
-{
-    background: #D6944B; 
-    color: black;
-} */  
-
 
 
 input.startbutton
@@ -184,11 +135,13 @@ input.startbutton
     outline: 0;  
     background: #FFFFFF url('../images/bg_form.png') left top repeat-x;  
     background: -webkit-gradient(linear, left top, left 25, from(#D6944B), color-stop(4%, #8F6332), to(#543A1D));  
-    background: -moz-linear-gradient(top, #D6944B, #8F6332 1px, #543A1D 25px);  
-    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
-    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
-    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
+    background: -moz-linear-gradient(top, #D6944B, #8F6332 1px, #543A1D 25px);
     */
+     
+    box-shadow: rgba(0,0,255, 0.1) 0px 0px 8px;  
+    -moz-box-shadow: rgba(0,0,255, 0.1) 0px 0px 8px;  
+    -webkit-box-shadow: rgba(0,0,255, 0.1) 0px 0px 8px;  
+ 
 }
 
 input.startbutton:hover,  
@@ -199,14 +152,14 @@ input.startbutton:focus
 
 .form label {   
     margin-left: 5px;   
-    color:  #e6be93;  
-    font-size: 12px; 
+    color:  black;  
+    font-size: 30px; 
     }  
     
 .ankete label {   
     margin-left: 5px;   
-    color:  #e6be93;  
-    font-size: 12px; 
+    color:  black;  
+    font-size: 30px; 
     }    
   
 /*.submit input {  
@@ -231,34 +184,16 @@ div.form
 	margin-top: 0px;
 	padding: 0px;
 	width: 480px;
-  height: 760px;
+	height: 760px;
 	margin-left: auto ;
 	margin-right: auto ;
 }
 
-div.ankete
-{
-  margin-top: 10px;
-	padding: 35px;
-	width: 500px;
-  height: 760px;
-	margin-left: auto ;
-	margin-right: auto ;
-}
 
 	
 
 
-div.nadpis
-{
-  clear: both;
-  margin-top: 0px;
-  margin-bottom: 3px;
-  padding-bottom: 0px;
-  color: #D6944B;
-  font-size: 14px;
 
-}
 
 
  
