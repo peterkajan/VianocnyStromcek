@@ -12,15 +12,18 @@
 
 		<div class="title">
 			<h1>PF 2014</h1>
-			<div class="borderLine"></div>	
-			<img src="../img/tree.png" >
 		</div>
 		
-		
-		<img src="../img/tree.png">
+
 
 		<div>	
-			<p>{% if p.sex=='m' %}Milý{% else %}Milá{% endif %} {{p.firstname}} {{p.lastname}}</p>
+			<p>
+				{% if p.sex=='m' %}Milý{% else %}Milá{% endif %} {{p.firstname}}
+				<br>
+				Obľúb si s nami po predvianočnom strese opäť Vianoce! Pretože z Brand- u Ti ich prajeme hlavne bezstarostné 
+				Aby si videl{% if p.sex=='f' %}a{% endif %}, že to myslíme vážne, postaráme sa o to, aby si naozaj mal{% if p.sex=='f' %}a{% endif %} o jednu starosť menej!
+				Z Brand-u sme pre Teba vyexpedovali voňavú vianočnú jedličku, ktorú Ti doručíme priamo do obývačky.
+ 			</p>
 		</div>
 		<div class="form">
 			<form action="/" method="post">
@@ -36,7 +39,7 @@
 					<input maxlength="200" type="hidden" name="firstname" value="{{p.firstname}}"/>
 					<input maxlength="200" type="hidden" name="lastname" value="{{p.lastname}}"/>
 					<input maxlength="200" type="hidden" name="sex" value="{{p.sex}}"/>
-
+					
 					<div class="residence">
 			  			<textarea maxlength="200" rows="2" cols="18" name="residence" class="validate{% if 'residence' in errorIds %} error{% endif%}">{{p.residence}}</textarea>
 						<label for="residence">Adresa doručenia</label>
@@ -49,16 +52,16 @@
 					
 					<div class="date">
 						<select id="date" name="date" class="validate {% if 'date' in errorIds %} error{% endif%}">
-							<option value="" disabled="disabled" selected="selected">-- Vyberte deň --</option>
+							<option value="" disabled="disabled" selected="selected"> Vyberte deň </option>
 							<option value="piatok" {% if p.date == 'piatok' %} selected="selected" {% endif %}>Piatok</option>
 							<option value="sobota" {% if p.date == 'sobota' %} selected="selected" {% endif %}>Sobota</option>
 						</select>
-						<label for="date">Ďeň doručenia</label>
+						<label for="date">Deň doručenia</label>
 					</div>
 				
 					<div class="time">
 						<select id="time" name="time" class="validate{% if 'time' in errorIds %} error{% endif%}">
-							<option value="" disabled="disabled" selected="selected">-- Vyberte čas --</option>
+							<option value="" disabled="disabled" selected="selected"> Vyberte čas </option>
 							<option value="doobeda" {% if p.time == 'doobeda' %} selected="selected" {% endif %}>Doobeda</option>
 							<option value="poobede" {% if p.time == 'poobede' %} selected="selected" {% endif %}>Poobede</option>
 						</select>

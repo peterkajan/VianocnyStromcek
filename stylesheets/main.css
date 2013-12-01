@@ -3,11 +3,11 @@ body
 	@font-face
  	{
 		font-family: boton;
-		src: url('../../fonts/boton.otf'),
+		src: url('../fonts/boton.otf'),
  	} 
 
 	font-family: boton, Tahoma, sans-serif;
-	background-image: url('../img/tree.png');
+	background-image: url('../img/bg.png');
 	background-repeat:no-repeat;
 	background-position:center top;
 	background-color:#FFFFFF;
@@ -17,8 +17,9 @@ body
 
 h1
 {
+	font-family: boton, Tahoma, sans-serif;
 	font-size: 80px;
-	color: red;
+	color: #9F1600;
 	padding-bottom:0px;
 	margin-bottom:0px;
 }
@@ -30,13 +31,13 @@ h1
     margin-top: 5px;
     margin-left: auto;
     margin-right: auto;
-    border-top: 2px solid rgb(230, 60, 60);
+    border-top: 2px solid #9F1600;
 }
 
 div.title
 {
-	background-color: white; 
-	height: 300px;
+	 
+	margin-right: 200px;
 	text-align: center;
 	padding-top: 30px;
 }
@@ -46,61 +47,44 @@ div.title
 textarea.error,
 input.error
 {
-	outline: solid 1px red;
+	box-shadow: 0px 0px 3pt 2pt red;
+	-moz-box-shadow: 0px 0px 3pt 2pt red;
+    -webkit-box-shadow: 0px 0px 3pt 2pt red;
+	
 }
 
 select.error
 {
- outline: solid 1px red;   
+	box-shadow: 0px 0px 3pt 2pt red;
+	-moz-box-shadow: 0px 0px 3pt 2pt red;
+    -webkit-box-shadow: 0px 0px 3pt 2pt red;
 }
 
 .correct
 {
-	outline: solid 1px green; 
+	box-shadow: 0px 0px 3pt 2pt green;
+	-moz-box-shadow: 0px 0px 3pt 2pt green;
+    -webkit-box-shadow: 0px 0px 3pt 2pt green;
+	
 }
 
 
-div.radioerror
-{
-  border: solid 1px;
-  border-color: red; 
-  clear: both;
-  margin-bottom: 10px;
-  padding-bottom: 6px;
-  padding-top: 6px;
-  width: 220px;
-  height:auto;
-  color: #FFFFFF;
-  font-size: 14px;
-}
 
-/* style for disabled divs (when distance < 90km) */
-div.disabled
-{
-  opacity:0.4;
-  filter:alpha(opacity=40);
-}
-/* style for disabled inputs (hoover and focus color change turned off) */
 
-input.disabled:hover ,
-input.disabled:focus , 
-textarea.disabled:hover ,
-textarea.disabled:focus 
-{   
-  border-color: #D6944B;
-}  
 
 /* text inputs */
 input, textarea {   
     display: inline;
     position: relative;
+    margin: 15px;
     padding: 4px;  
     outline: 0;  
-    font: normal 13px/100% Verdana, Tahoma, sans-serif;  
-    width: 150px;  
-    background-color: black;
-    border: solid 3px #D6944B;
-    color: #D6944B;
+    font: normal 20px/100% Verdana, Tahoma, sans-serif;  
+    width: 300px;  
+    height: 80px;
+    background-color: white;
+    border: solid 3px #115404;
+    color: #227400;
   
   /*
     background: #FFFFFF url('../images/bg_form.png') left top repeat-x;  
@@ -110,61 +94,49 @@ input, textarea {
     -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
     -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;        
   */
-/*  -webkit-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
     -moz-border-radius: 5px; 
     border-radius: 5px; 
-*/    
+    
 }  
 
 
 textarea 
 {   
-    width: 150px;
-    max-width: 150px;
-    max-height: 40px;  
+
+    width: 300px;  
+    height: 80px;
+    max-width: 300px;
+    max-height: 80px;  
 }  
     
-input.radiobutton
-{
-    width: 20px;
-    border: 0px;
-   
-}              
+              
                                    
 input:hover, textarea:hover,  
 input:focus, textarea:focus {   
-    border-color: #e6be93;     
+    box-shadow: 0px 0px 3pt 2pt #5B8C0D;
+	-moz-box-shadow: 0px 0px 3pt 2pt #5B8C0;
+    -webkit-box-shadow: 0px 0px 3pt 2pt #5B8C0;     
 }
     
-input.check
-{
-    width: 20px;
-    border: 0px;
-}
+
 
 select
-{
-   border: solid 3px #D6944B;
-   background-color: black;
-   color: #D6944B; 
+{	
+	width: 313px;  
+    height: 80px;
+    margin: 15px;
+	border: solid 3px #115404;
+	background-color: white;
+	font: normal 20px/100% Verdana, Tahoma, sans-serif; 
+	color: #227400;
+	-webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px;  
 }
 
-/*select option 
-{
-    
-    : #D6944B; 
-    color: black;
-}
 
-input[type="select"]:selected 
-{
-    background: #D6944B; 
-    color: black;
-} */  
-
-
-
-input.startbutton
+/*input.startbutton
 {
    
   display: block; 
@@ -178,36 +150,34 @@ input.startbutton
   color: #D6944B;
   font-weight: bold;
   
-   /*
+   
     padding: 4px;  
     border: solid 1px #D6944B;  
     outline: 0;  
     background: #FFFFFF url('../images/bg_form.png') left top repeat-x;  
     background: -webkit-gradient(linear, left top, left 25, from(#D6944B), color-stop(4%, #8F6332), to(#543A1D));  
-    background: -moz-linear-gradient(top, #D6944B, #8F6332 1px, #543A1D 25px);  
-    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
-    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
-    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
-    */
+    background: -moz-linear-gradient(top, #D6944B, #8F6332 1px, #543A1D 25px);
+    
+     
+    box-shadow: rgba(0,0,255, 0.1) 0px 0px 8px;  
+    -moz-box-shadow: rgba(0,0,255, 0.1) 0px 0px 8px;  
+    -webkit-box-shadow: rgba(0,0,255, 0.1) 0px 0px 8px;  
+ 
 }
 
 input.startbutton:hover,  
 input.startbutton:focus 
 {   
     border-color: #e6be93;     
-}  
+}*/  
 
 .form label {   
     margin-left: 5px;   
-    color:  #e6be93;  
-    font-size: 12px; 
+    color:  #9F1600;  
+    font-size: 16px; 
     }  
     
-.ankete label {   
-    margin-left: 5px;   
-    color:  #e6be93;  
-    font-size: 12px; 
-    }    
+
   
 /*.submit input {  
     width: auto;  
@@ -231,37 +201,13 @@ div.form
 	margin-top: 0px;
 	padding: 0px;
 	width: 480px;
-  height: 760px;
+	height: 760px;
 	margin-left: auto ;
 	margin-right: auto ;
 }
 
-div.ankete
-{
-  margin-top: 10px;
-	padding: 35px;
-	width: 500px;
-  height: 760px;
-	margin-left: auto ;
-	margin-right: auto ;
-}
-
-	
 
 
-div.nadpis
-{
-  clear: both;
-  margin-top: 0px;
-  margin-bottom: 3px;
-  padding-bottom: 0px;
-  color: #D6944B;
-  font-size: 14px;
-
-}
-
-
- 
 .errorMsg
 { 
     font-size: 11px;
