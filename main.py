@@ -1,12 +1,11 @@
-﻿from model import *
-from util import *
-
-import os
-import urllib
+﻿import os
 import re
 import logging
 import jinja2
 import webapp2
+from model import Employee
+from util import BaseHandler, sessionConfig
+from google.appengine.ext import ndb
 
 
 JINJA_ENVIRONMENT = jinja2.Environment(
