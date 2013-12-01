@@ -49,8 +49,8 @@ class MainPage(BaseHandler):
     def get(self):
         #uncomment this to create test client in local repository on get request
         #createTestEmployee()
-        
         keyUrl = self.request.get('key')
+        logging.info('POST DB Key: ' + keyUrl)
         if not keyUrl:
             self.abort(404)
             
@@ -59,6 +59,7 @@ class MainPage(BaseHandler):
         if not empl:
             self.abort(404)
         
+        logging.info('GET employee: ' + unicode(empl.firstname) + ' ' + unicode(empl.lastname))
         self.session['key'] = key.urlsafe()
         params = {}
         params['firstname'] = empl.firstname
@@ -101,18 +102,19 @@ class MainPage(BaseHandler):
         errors, errorIds = self.validateData() 
         if errors:
             self.displayPage( self.request.params, errors, errorIds )
-            return
+            return        
         
-        logging.info(self.session.get('key'))
+        logging.info('POST DB Key: ' + self.session.get('key'))
         key = ndb.Key( urlsafe = self.session.get('key'))
         empl = key.get()
-        logging.info('employee: ' + unicode(empl.firstname) + ' ' + unicode(empl.lastname))
+        logging.info('Successfull POST employee: ' + unicode(empl.firstname) + ' ' + unicode(empl.lastname))
         
         empl.residence = self.request.get('residence')
         empl.phone = self.request.get('phone')
         empl.date = self.request.get('date')
         empl.time = self.request.get('time')
-        empl.put()        
+        empl.put()
+        logging.info('Data stored succesfully')        
         self.redirect('/results')
         
 class ResultPage(BaseHandler):
@@ -126,7 +128,7 @@ class ResultPage(BaseHandler):
 application = webapp2.WSGIApplication([
         ('/', MainPage),
         ('/results', ResultPage),
-    ], config = sessionConfig, debug=True)
+    ], config = sessionConfig)
 
 def main():
     # Set the logging level in the main function
