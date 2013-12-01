@@ -20,7 +20,7 @@
 		<img src="../img/tree.png">
 
 		<div>	
-			<p>Ahoj {{p.firstname}} {{p.lastname}}</p>
+			<p>{% if p.sex=='m' %}Milý{% else %}Milá{% endif %} {{p.firstname}} {{p.lastname}}</p>
 		</div>
 		<div class="form">
 			<form action="/" method="post">
@@ -35,6 +35,7 @@
 				<div class="other">
 					<input maxlength="200" type="hidden" name="firstname" value="{{p.firstname}}"/>
 					<input maxlength="200" type="hidden" name="lastname" value="{{p.lastname}}"/>
+					<input maxlength="200" type="hidden" name="sex" value="{{p.sex}}"/>
 
 					<div class="residence">
 			  			<textarea maxlength="200" rows="2" cols="18" name="residence" class="validate{% if 'residence' in errorIds %} error{% endif%}">{{p.residence}}</textarea>
