@@ -125,16 +125,6 @@ class MainPage(BaseHandler):
         self.redirect('/?' + urllib.urlencode(query_params))
 
 class LinkPage(BaseHandler):
-    def displayPage(self, params, edit=False, errors=[], errorIds=[]):
-        template_values = {
-            'p': params,
-            'errors': errors,
-            'errorIds': errorIds,
-            'edit' : edit,
-        }
-        template = JINJA_ENVIRONMENT.get_template('index.html')
-        self.response.write(template.render(template_values))
-        
     def get(self):
         out = '\n'
         for emp in Employee.query().fetch():
