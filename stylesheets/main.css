@@ -1,12 +1,13 @@
-body
-{
+
+
 
 @font-face {
     font-family: 'botonbold_italic';
     src: url('boton_bold_italic-webfont.eot');
     src: url('boton_bold_italic-webfont.eot?#iefix') format('embedded-opentype'),
          url('boton_bold_italic-webfont.woff') format('woff'),
-         url('boton_bold_italic-webfont.ttf') format('truetype');
+         url('boton_bold_italic-webfont.ttf') format('truetype'),
+         url('boton_bold_italic-webfont.svg#botonbold_italic') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -20,11 +21,14 @@ body
     src: url('pfdin-webfont.eot');
     src: url('pfdin-webfont.eot?#iefix') format('embedded-opentype'),
          url('pfdin-webfont.woff') format('woff'),
-         url('pfdin-webfont.ttf') format('truetype');
+         url('pfdin-webfont.ttf') format('truetype'),
+         url('pfdin-webfont.svg#pf_din_text_cond_proXTh') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
+
+body
+{
 	font-family: 'pf_din_text_cond_proXTh', Helvetica, sans-serif;
 	/*background-image: url('../img/bg.png');*/
 	background-repeat:no-repeat;
@@ -37,7 +41,7 @@ body
 h1
 {
 	text-align:center;
-	font-family: PF Din Text Cond Pro X Thin, Tahoma, sans-serif;
+	font-family: 'pf_din_text_cond_proXTh', Tahoma, sans-serif;
 	font-size: 50px;
 	color: #853200;
 }
@@ -68,11 +72,11 @@ div.mainText1
 	position: absolute;
 	left: 50%;
 	margin-left: -205px;
-	top: 20px;
+	top: 70px;
 	color: #853200;
 	background: transparent;
-	font-family: PF Din Text Cond Pro X Thin;
-	font-size: 25px;
+	font-family: 'pf_din_text_cond_proXTh';
+	font-size: 18px;
 	width:130px; 
 	text-align: left;
 	padding-top: 10px;
@@ -87,8 +91,8 @@ div.mainText2
 	z-index: -2;
 	color: darkred;
 	background: transparent;
-	font-family: 'botonbold_italic';
-	font-size: 25px;
+	font-family: 'pf_din_text_cond_proXTh';
+	font-size: 18px;
 	width: 130px; 
 	margin-left: -50px;
 	text-align: left;
@@ -99,11 +103,11 @@ div.mainText3
 {
 	position: absolute;
 	left: 50%;
-	top: 20px;
+	top: 70px;
 	color: darkgreen;
 	background: transparent;
-	font-family: PF Din Text Cond Pro X Thin;
-	font-size: 25px;
+	font-family: 'pf_din_text_cond_proXTh';
+	font-size: 18px;
 	width:130px;
 	margin-left: 110px;
 	text-align: left;
@@ -117,7 +121,7 @@ div.mainText4
 	top: 1060px;
 	color: #853200;
 	background: transparent;
-	font-family: PF Din Text Cond Pro X Thin;
+	font-family: 'pf_din_text_cond_proXTh';
 	font-size: 25px;
 	width:400px;
 	margin-left: -200px;
@@ -185,7 +189,7 @@ input, textarea {
     margin: 15px;
     padding: 4px;    
     text-align:center;
-    font: bold 25px/100% PF Din Text Cond Pro X Thin, Tahoma, sans-serif;  
+    font: bold 25px/100% 'pf_din_text_cond_proXTh', Tahoma, sans-serif;  
     width: 190px;  
     height: 40px;
     background: transparent;
@@ -210,7 +214,7 @@ input, textarea {
 
 textarea 
 {   
-	font: bold 20px/100% PF Din Text Cond Pro X Thin, Tahoma, sans-serif; 
+	font: bold 20px/100% 'pf_din_text_cond_proXTh', Tahoma, sans-serif; 
     width: 190px;  
     height: 40px;
     max-width: 190px;
@@ -241,7 +245,7 @@ select
     background: transparent;
    	border: none;
 	text-align: center;
-	font: 25px/100% PF Din Text Cond Pro X Thin, Tahoma, sans-serif; 
+	font: 25px/100% 'pf_din_text_cond_proXTh', Tahoma, sans-serif; 
 	color: white;
 	-webkit-border-radius: 5px; 
     -moz-border-radius: 5px; 
@@ -295,7 +299,7 @@ input.submit
 	top: 980px;
     padding: 4px;    
     text-align:center;
-    font: 30px/100% PF Din Text Cond Pro X Thin, Tahoma, sans-serif;  
+    font: 30px/100% 'pf_din_text_cond_proXTh', Tahoma, sans-serif;  
     width: 200px;  
     height: 50px;
     background: transparent;
@@ -305,11 +309,11 @@ input.submit
 } 
 
 
-.submit:hoover,
+.submit:hover,
 .submit:focus
 {
-	border: solid 1px #C5164A;
-	color: #C5164A;
+	border: solid 1px red;
+	color: red;
 	outline: none;	
 }
 
