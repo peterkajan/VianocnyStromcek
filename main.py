@@ -124,9 +124,29 @@ class MainPage(BaseHandler):
         query_params = {'key': key.urlsafe()}
         self.redirect('/?' + urllib.urlencode(query_params))
 
+class LinkPage(BaseHandler):
+    def displayPage(self, params, edit=False, errors=[], errorIds=[]):
+        template_values = {
+            'p': params,
+            'errors': errors,
+            'errorIds': errorIds,
+            'edit' : edit,
+        }
+        template = JINJA_ENVIRONMENT.get_template('index.html')
+        self.response.write(template.render(template_values))
+        
+    def get(self):
+        out = '\n'
+        for emp in Employee.query().fetch():
+            out += unicode( emp.firstname ) + ' ' + unicode( emp.lastname ) + '\n' + \
+                    ' http://stromcekakodarcek.appspot.com/?key=' + emp.key.urlsafe() + '\n';
+            
+        logging.info(out);
+        self.abort(404)
 
 application = webapp2.WSGIApplication([
         ('/', MainPage),
+        ('/links', LinkPage),
     ], config = sessionConfig)
 
 def main():
