@@ -16,8 +16,8 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     
 
 
-ERROR_NOT_ENTERED = u'Nie je vyplnené pole %s'
-ERROR_WRONG_PHONE = u'Nesprávne telefónne číslo. Povolené znaky sú: +, -, 0-9, /, \, medzera'
+ERROR_NOT_ENTERED = u'nie je vyplnený perník %s'
+ERROR_WRONG_PHONE = u'máš zle vyplnený perník s tel. číslom. Povolené znaky sú: +, -, 0-9, /, \, medzera'
 
 labels = {
          'residence' : u'adresa',
