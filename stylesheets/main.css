@@ -1,12 +1,31 @@
 body
 {
-	@font-face
- 	{
-		font-family: PF Din Text Cond Pro X Thin;
-		src: url('../fonts/pfdin.ttf');
- 	} 
 
-	font-family: PF Din Text Cond Pro X Thin, Helvetica, sans-serif;
+@font-face {
+    font-family: 'botonbold_italic';
+    src: url('boton_bold_italic-webfont.eot');
+    src: url('boton_bold_italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('boton_bold_italic-webfont.woff') format('woff'),
+         url('boton_bold_italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'pf_din_text_cond_proXTh';
+    src: url('pfdin-webfont.eot');
+    src: url('pfdin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('pfdin-webfont.woff') format('woff'),
+         url('pfdin-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+	font-family: 'pf_din_text_cond_proXTh', Helvetica, sans-serif;
 	/*background-image: url('../img/bg.png');*/
 	background-repeat:no-repeat;
 	background-position:center top;
@@ -68,7 +87,7 @@ div.mainText2
 	z-index: -2;
 	color: darkred;
 	background: transparent;
-	font-family: PF Din Text Cond Pro X Thin;
+	font-family: 'botonbold_italic';
 	font-size: 25px;
 	width: 130px; 
 	margin-left: -50px;
