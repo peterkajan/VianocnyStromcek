@@ -76,7 +76,7 @@ div.mainText1
 	color: #853200;
 	background: transparent;
 	font-family: 'pf_din_text_cond_proXTh';
-	font-size: 18px;
+	font-size: 25px;
 	width:130px; 
 	text-align: left;
 	padding-top: 10px;
@@ -92,7 +92,7 @@ div.mainText2
 	color: darkred;
 	background: transparent;
 	font-family: 'pf_din_text_cond_proXTh';
-	font-size: 18px;
+	font-size: 25px;
 	width: 130px; 
 	margin-left: -50px;
 	text-align: left;
@@ -107,7 +107,7 @@ div.mainText3
 	color: darkgreen;
 	background: transparent;
 	font-family: 'pf_din_text_cond_proXTh';
-	font-size: 18px;
+	font-size: 25px;
 	width:130px;
 	margin-left: 110px;
 	text-align: left;
