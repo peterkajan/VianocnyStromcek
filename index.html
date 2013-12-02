@@ -140,9 +140,7 @@
 				}				
 			};
 			
-			$(".validate").each(function(){
-  				onLostFocus( this );    
-			}).on("input change", function(){
+			$(".validate").on("input change", function(){
 	        	onLostFocus( this );
 	        });
 	      
