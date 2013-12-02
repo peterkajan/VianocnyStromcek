@@ -64,7 +64,7 @@ div.mainText2
 {
 	position: absolute;
 	left: 50%;
-	top: 20px;
+	top: 70px;
 	z-index: -2;
 	color: darkred;
 	background: transparent;
@@ -95,7 +95,7 @@ div.mainText4
 {
 	position: absolute;
 	left: 50%;
-	top: 1030px;
+	top: 1060px;
 	color: #853200;
 	background: transparent;
 	font-family: PF Din Text Cond Pro X Thin;
@@ -166,7 +166,7 @@ input, textarea {
     margin: 15px;
     padding: 4px;    
     text-align:center;
-    font: bold 20px/100% PF Din Text Cond Pro X Thin, Tahoma, sans-serif;  
+    font: bold 25px/100% PF Din Text Cond Pro X Thin, Tahoma, sans-serif;  
     width: 190px;  
     height: 40px;
     background: transparent;
@@ -191,7 +191,7 @@ input, textarea {
 
 textarea 
 {   
-
+	font: bold 20px/100% PF Din Text Cond Pro X Thin, Tahoma, sans-serif; 
     width: 190px;  
     height: 40px;
     max-width: 190px;
@@ -273,10 +273,10 @@ input.submit
 	position: absolute;
 	left:50%;
 	margin-left: -100px;
-	top: 960px;
+	top: 980px;
     padding: 4px;    
     text-align:center;
-    font: 25px/100% PF Din Text Cond Pro X Thin, Tahoma, sans-serif;  
+    font: 30px/100% PF Din Text Cond Pro X Thin, Tahoma, sans-serif;  
     width: 200px;  
     height: 50px;
     background: transparent;
