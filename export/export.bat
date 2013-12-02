@@ -1,0 +1,2 @@
+set PYTHONPATH=.
+appcfg.py download_data --config_file=exporter.py --filename=data_export.csv --kind=Employee --url=http://stromcekakodarcek.appspot.com/_ah/remote_api --application=s~stromcekakodarcek D:\!Projects\VianocnyStromcek\VianocnyStromcek

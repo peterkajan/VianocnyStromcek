@@ -4,3 +4,6 @@
 .svn*
 *.pydevproject
 .settings
+*.sql3
+*.csv
+
