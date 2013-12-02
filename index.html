@@ -10,14 +10,17 @@
 
 	<body>
 		<img style="position: absolute; left:50%; margin-left:-425px; top:0px; z-index:-1;"src="../img/bg3.png">
-		<img style="margin-bottom:10px; position: absolute; width:200px; height:auto; left:50%; margin-left:-100px; top:1180px; z-index:-1;"src="../img/brand.png">
+		<!--<img style="margin-bottom:10px; position: absolute; width:200px; height:auto; left:50%; margin-left:-100px; top:1180px; z-index:-1;"src="../img/brand.png">-->
 	
 		
 		
 
 
-		<div class="mainText1 ">	
+		<div class="mainText2 ">	
 				{% if errors %}
+					<div class="thanks">
+						Prepáč, ale
+					</div>			
 					<div class="errorMsg">
 						{% for error in errors %}
 							{{error}}
@@ -28,15 +31,26 @@
 					<div class="thanks">
 						Ďakujeme
 					</div>
-				{% else %}
-					{% if p.sex=='m' %}Ahoj{% else %}Ahoj{% endif %} {{p.firstname}} :)
+					<div style="font-family: 'pf_din_text_cond_proXTh'; text-align:center; width:130px; margin-top:10px;">
+						Nižšie si môžeš pozrieť svoje údaje a kedykoľvek ich zmeniť :)						
+					</div>
 				{% endif %}
 		</div>		
+		<div class="mainText1">			
+				{% if not edit and not errors %}
+					{% if p.sex=='m' %}Ahoj{% else %}Ahoj{% endif %} {{p.firstname}} :)
+				{% endif %}
+		</div>
+		
+		
 		<div class="mainText2">			
 				{% if not edit and not errors %}
 					Ti praje bezstarostné Vianoce!
 				{% endif %}
 		</div>
+
+
+
 		<div class="mainText3">
 				{% if not edit and not errors %}					
 					Aby si videl{% if p.sex=='f' %}a{% endif %}, že to myslíme vážne, <!--postaráme sa o to, aby si naozaj mal{% if p.sex=='f' %}a{% endif %} o jednu starosť menej!-->
