@@ -47,14 +47,14 @@ div.title
 div.mainText1
 {
 	position: absolute;
-	left: 443px;
+	left: 50%;
+	margin-left: -205px;
 	top: 20px;
 	color: #853200;
 	background: transparent;
 	font-family: PF Din Text Cond Pro X Thin;
 	font-size: 25px;
 	width:130px; 
-	margin: auto;
 	text-align: left;
 	padding-top: 10px;
 	
@@ -63,15 +63,15 @@ div.mainText1
 div.mainText2
 {
 	position: absolute;
-	left: 597px;
+	left: 50%;
 	top: 20px;
 	z-index: -2;
-	color: #853200;
+	color: darkred;
 	background: transparent;
 	font-family: PF Din Text Cond Pro X Thin;
 	font-size: 25px;
 	width: 130px; 
-	margin: auto;
+	margin-left: -50px;
 	text-align: left;
 	padding-top: 10px;
 }
@@ -79,14 +79,14 @@ div.mainText2
 div.mainText3
 {
 	position: absolute;
-	left: 755px;
+	left: 50%;
 	top: 20px;
-	color: #853200;
+	color: darkgreen;
 	background: transparent;
 	font-family: PF Din Text Cond Pro X Thin;
 	font-size: 25px;
 	width:130px;
-	margin: auto;
+	margin-left: 110px;
 	text-align: left;
 	padding-top: 10px;
 }
@@ -94,14 +94,14 @@ div.mainText3
 div.mainText4
 {
 	position: absolute;
-	left: 400px;
-	top: 970px;
+	left: 50%;
+	top: 1030px;
 	color: #853200;
 	background: transparent;
 	font-family: PF Din Text Cond Pro X Thin;
 	font-size: 25px;
 	width:400px;
-	margin: auto;
+	margin-left: -200px;
 	text-align: center;
 	padding-top: 10px;
 }
@@ -109,28 +109,32 @@ div.mainText4
 div.residence
 {
 	position: absolute;
-	left: 470px;
+	left:50%;
+	margin-left: -180px;
 	top: 413px;
 }
 
 div.phone
 {
 	position: absolute;
-	left: 782px;
+	left:50%;
+	margin-left: 132px;
 	top: 560px;
 }
 
 div.date
 {
 	position: absolute;
-	left: 320px;
+	left:50%;
+	margin-left: -335px;
 	top: 710px;
 }
 
 div.time
 {
 	position: absolute;
-	left: 635px;
+	left:50%;
+	margin-left: -15px;
 	top: 838px;
 }
 
@@ -267,8 +271,9 @@ input.startbutton:focus
 input.submit 
 {  
 	position: absolute;
-	left: 320px;
-	top: 890px;
+	left:50%;
+	margin-left: -100px;
+	top: 960px;
     padding: 4px;    
     text-align:center;
     font: 25px/100% PF Din Text Cond Pro X Thin, Tahoma, sans-serif;  

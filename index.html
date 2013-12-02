@@ -9,7 +9,8 @@
 	</head>
 
 	<body>
-		<img style="position: absolute; left:225px; top:0px; z-index:-1;"src="../img/bg3.png">
+		<img style="position: absolute; left:50%; margin-left:-425px; top:0px; z-index:-1;"src="../img/bg3.png">
+		<img style="margin-bottom:10px; position: absolute; width:200px; height:auto; left:50%; margin-left:-100px; top:1150px; z-index:-1;"src="../img/brand.png">
 	
 		
 		
@@ -49,8 +50,8 @@
 					<div class="date">
 						<select id="date" name="date" class="validate {% if 'date' in errorIds %} error{% endif%}">
 							<option value="" disabled="disabled" selected="selected">Vyber si deň</option>
-							<option value="piatok" {% if p.date == 'piatok' %} selected="selected" {% endif %}>Piatok</option>
-							<option value="sobota" {% if p.date == 'sobota' %} selected="selected" {% endif %}>Sobota</option>
+							<option value="piatok" {% if p.date == 'piatok' %} selected="selected" {% endif %}>Piatok 20.12</option>
+							<option value="sobota" {% if p.date == 'sobota' %} selected="selected" {% endif %}>Sobota 21.12</option>
 						</select>
 						<!--<label for="date">Deň doručenia</label>-->
 					</div>
