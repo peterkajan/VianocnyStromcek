@@ -6,6 +6,7 @@ import webapp2
 from model import Employee
 from util import BaseHandler, sessionConfig
 from google.appengine.ext import ndb
+import urllib
 
 
 JINJA_ENVIRONMENT = jinja2.Environment(
@@ -15,14 +16,14 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     
 
 
-ERROR_NOT_ENTERED = u'Zabudli ste vyplniť pole %s'
+ERROR_NOT_ENTERED = u'Nie je vyplnené pole %s'
 ERROR_WRONG_PHONE = u'Nesprávne telefónne číslo. Povolené znaky sú: +, -, 0-9, /, \, medzera'
 
 labels = {
-         'residence' : u'Adresa',
-         'phone' : u'Telefónne číslo',
-         'date' : u'Dátum doručenia',
-         'time' : u'Čas doručenia', 
+         'residence' : u'adresa',
+         'phone' : u'telefónne číslo',
+         'date' : u'dátum doručenia',
+         'time' : u'čas doručenia', 
 }
 
 def getUnenteredMsg( value ):
@@ -38,11 +39,12 @@ def createTestEmployee():
     
 class MainPage(BaseHandler):
 
-    def displayPage(self, params, errors=[], errorIds=[]):
+    def displayPage(self, params, edit=False, errors=[], errorIds=[]):
         template_values = {
             'p': params,
             'errors': errors,
             'errorIds': errorIds,
+            'edit' : edit,
         }
         template = JINJA_ENVIRONMENT.get_template('index.html')
         self.response.write(template.render(template_values))
@@ -66,7 +68,8 @@ class MainPage(BaseHandler):
         params['firstname'] = empl.firstname
         params['lastname'] = empl.lastname
         params['sex'] = empl.sex
-        self.displayPage( empl )        
+            
+        self.displayPage( empl, empl.residence )        
         
        
     def validatePhone(self, phone, errors, errorIds):
@@ -101,14 +104,15 @@ class MainPage(BaseHandler):
             
             
     def post(self):
-        errors, errorIds = self.validateData() 
-        if errors:
-            self.displayPage( self.request.params, errors, errorIds )
-            return        
-        
         logging.info('POST DB Key: ' + self.session.get('key'))
+        errors, errorIds = self.validateData() 
         key = ndb.Key( urlsafe = self.session.get('key'))
         empl = key.get()
+        
+        if errors:
+            self.displayPage( self.request.params, empl.residence, errors, errorIds )
+            return        
+        
         logging.info('Successfull POST employee: ' + unicode(empl.firstname) + ' ' + unicode(empl.lastname))
         
         empl.residence = self.request.get('residence')
@@ -117,19 +121,12 @@ class MainPage(BaseHandler):
         empl.time = self.request.get('time')
         empl.put()
         logging.info('Data stored succesfully')        
-        self.redirect('/results')
-        
-class ResultPage(BaseHandler):
-            
-    def get(self):
-        template_values = { 
-        }
-        template = JINJA_ENVIRONMENT.get_template('results.html')
-        self.response.write(template.render(template_values))
+        query_params = {'key': key.urlsafe()}
+        self.redirect('/?' + urllib.urlencode(query_params))
+
 
 application = webapp2.WSGIApplication([
         ('/', MainPage),
-        ('/results', ResultPage),
     ], config = sessionConfig)
 
 def main():

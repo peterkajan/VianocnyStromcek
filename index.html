@@ -16,20 +16,38 @@
 		
 
 
-		<div class="mainText1">	
-				{% if p.sex=='m' %}Ahoj{% else %}Ahoj{% endif %} {{p.firstname}} :)
-			
+		<div class="mainText1 ">	
+				{% if errors %}
+					<div class="errorMsg">
+						{% for error in errors %}
+							{{error}}
+							<br/>
+						{% endfor %}
+					</div>
+				{% elif edit %}
+					<div class="thanks">
+						Ďakujeme
+					</div>
+				{% else %}
+					{% if p.sex=='m' %}Ahoj{% else %}Ahoj{% endif %} {{p.firstname}} :)
+				{% endif %}
 		</div>		
 		<div class="mainText2">			
-				Ti praje bezstarostné Vianoce!
+				{% if not edit and not errors %}
+					Ti praje bezstarostné Vianoce!
+				{% endif %}
 		</div>
-		<div class="mainText3">					
-				Aby si videl{% if p.sex=='f' %}a{% endif %}, že to myslíme vážne, <!--postaráme sa o to, aby si naozaj mal{% if p.sex=='f' %}a{% endif %} o jednu starosť menej!-->
-				vyexpedovali sme pre Teba voňavú vianočnú jedličku, ktorú Ti doručíme priamo do obývačky!				
+		<div class="mainText3">
+				{% if not edit and not errors %}					
+					Aby si videl{% if p.sex=='f' %}a{% endif %}, že to myslíme vážne, <!--postaráme sa o to, aby si naozaj mal{% if p.sex=='f' %}a{% endif %} o jednu starosť menej!-->
+					vyexpedovali sme pre Teba voňavú vianočnú jedličku, ktorú Ti doručíme priamo do obývačky!
+				{% endif %}				
 		</div>
-		<div class="mainText4">			
-				A potom si už len užívaj bezstarostné Vianoce a začiatok nového roka!<br>
-				Brand Tím
+		<div class="mainText4">
+				{% if not edit and not errors %}			
+					A potom si už len užívaj bezstarostné Vianoce a začiatok nového roka!<br>
+					Brand Tím
+				{% endif %}
 		</div>
 		
 		<div class="form">
@@ -64,20 +82,8 @@
 						</select>
 						<!--<label for="time">Čas doručenia</label>-->
 					</div>
-					
-				<div class="errorMsg">
-					{% for error in errors %}
-					{{error}}
-					<br/>
-					{% endfor %}
-				</div>
-				
-		
-
 					<div>
-						<input class="submit" type="submit" value="Nahraj údaje"/>
-	
-
+						<input class="submit" type="submit" value="{% if edit %}Zmeň{% else %}Nahraj{% endif %} údaje"/>
 					</div>
 					
 				<!--	<div class="title">
