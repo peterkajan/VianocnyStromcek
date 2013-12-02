@@ -367,3 +367,11 @@ div.loaderCanvas {
 	font-size: 32px;
 	font-weight: 900;
 }
+
+option {
+	color: #853200;
+}
+
+option[disabled] {
+	color: #808080;
+}
