@@ -35,6 +35,7 @@ h1
 
 div.title
 { 
+	position: relative;
 	margin-top:0px;
 	padding-top: 0px;
 	width:300px;
@@ -43,14 +44,65 @@ div.title
 	margin-right: auto;
 }
 
-div.mainText
+div.mainText1
 {
-	background-color: white;
+	position: absolute;
+	left: 443px;
+	top: 20px;
+	color: #853200;
+	background: transparent;
 	font-family: PF Din Text Cond Pro X Thin;
-	font-size: 22px;
-	width: 400px; 
+	font-size: 25px;
+	width:130px; 
 	margin: auto;
 	text-align: left;
+	padding-top: 10px;
+	
+}
+
+div.mainText2
+{
+	position: absolute;
+	left: 597px;
+	top: 20px;
+	z-index: -2;
+	color: #853200;
+	background: transparent;
+	font-family: PF Din Text Cond Pro X Thin;
+	font-size: 25px;
+	width: 130px; 
+	margin: auto;
+	text-align: left;
+	padding-top: 10px;
+}
+
+div.mainText3
+{
+	position: absolute;
+	left: 755px;
+	top: 20px;
+	color: #853200;
+	background: transparent;
+	font-family: PF Din Text Cond Pro X Thin;
+	font-size: 25px;
+	width:130px;
+	margin: auto;
+	text-align: left;
+	padding-top: 10px;
+}
+
+div.mainText4
+{
+	position: absolute;
+	left: 400px;
+	top: 970px;
+	color: #853200;
+	background: transparent;
+	font-family: PF Din Text Cond Pro X Thin;
+	font-size: 25px;
+	width:400px;
+	margin: auto;
+	text-align: center;
 	padding-top: 10px;
 }
 
@@ -87,13 +139,13 @@ div.time
 textarea.error,
 input.error
 {
-	border: solid 1px darkred;
+	border: none;
 	
 }
 
 select.error
 {
-	border: solid 1px darkred;
+	border: none;
 }
 
 .correct
@@ -216,12 +268,12 @@ input.submit
 {  
 	position: absolute;
 	left: 320px;
-	top: 925px;
+	top: 890px;
     padding: 4px;    
     text-align:center;
-    font: 20px/100% PF Din Text Cond Pro X Thin, Tahoma, sans-serif;  
-    width: 190px;  
-    height: 40px;
+    font: 25px/100% PF Din Text Cond Pro X Thin, Tahoma, sans-serif;  
+    width: 200px;  
+    height: 50px;
     background: transparent;
     border: solid 1px; #853200;
     color: #853200;
@@ -229,7 +281,13 @@ input.submit
 } 
 
 
-
+.submit:hoover,
+.submit:focus
+{
+	border: solid 1px #C5164A;
+	color: #C5164A;
+	outline: none;	
+}
 
 
 
@@ -249,6 +307,7 @@ div.form
 
 .errorMsg
 { 
+	position: absolute;
     font-size: 11px;
     color: red ;
     margin-top: 10px;

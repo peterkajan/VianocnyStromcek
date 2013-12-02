@@ -9,24 +9,28 @@
 	</head>
 
 	<body>
-		<img style="position: absolute; left:200px; top:0px; z-index:-1;"src="../img/bg.png">
+		<img style="position: absolute; left:225px; top:0px; z-index:-1;"src="../img/bg3.png">
 	
-		<div class="title">
-			<h1>PF 2014</h1>
-			<div class="borderLine"></div>
-		</div>
+		
 		
 
 
-		<div class="mainText">	
-			<p>
-				{% if p.sex=='m' %}Ahoj{% else %}Ahoj{% endif %} {{p.firstname}}
-				<br>
-				Brand Ti praje bezstarostné Vianoce! 
-				Aby si videl{% if p.sex=='f' %}a{% endif %}, že to myslíme vážne, postaráme sa o to, aby si naozaj mal{% if p.sex=='f' %}a{% endif %} o jednu starosť menej!
-				Z Brand-u sme pre Teba vyexpedovali voňavú vianočnú jedličku, ktorú Ti doručíme priamo do obývačky.
- 			</p>
+		<div class="mainText1">	
+				{% if p.sex=='m' %}Ahoj{% else %}Ahoj{% endif %} {{p.firstname}} :)
+			
+		</div>		
+		<div class="mainText2">			
+				<font color="white">...Brand...</font> Ti praje bezstarostné Vianoce!
 		</div>
+		<div class="mainText3">					
+				Aby si videl{% if p.sex=='f' %}a{% endif %}, že to myslíme vážne, <!--postaráme sa o to, aby si naozaj mal{% if p.sex=='f' %}a{% endif %} o jednu starosť menej!-->
+				vyexpedovali sme pre Teba voňavú vianočnú jedličku, ktorú Ti doručíme priamo do obývačky!				
+		</div>
+		<div class="mainText4">			
+				A potom si už len užívaj bezstarostné Vianoce a začiatok nového roka!<br>
+				Brand Tím
+		</div>
+		
 		<div class="form">
 			<form action="/" method="post">
 
@@ -71,13 +75,20 @@
 
 					<div>
 						<input class="submit" type="submit" value="Nahraj údaje"/>
+	
+
 					</div>
 					
+				<!--	<div class="title">
+						<h1>PF 2014</h1>
+						<div class="borderLine"></div>
+				</div>-->
+					
 					<div class="other">
-					<input maxlength="200" type="hidden" name="firstname" value="{{p.firstname}}"/>
-					<input maxlength="200" type="hidden" name="lastname" value="{{p.lastname}}"/>
-					<input maxlength="200" type="hidden" name="sex" value="{{p.sex}}"/>
-				</div>	
+						<input maxlength="200" type="hidden" name="firstname" value="{{p.firstname}}"/>
+						<input maxlength="200" type="hidden" name="lastname" value="{{p.lastname}}"/>
+						<input maxlength="200" type="hidden" name="sex" value="{{p.sex}}"/>
+					</div>	
 	 		</form>
   		</div>
   		
