@@ -127,6 +127,7 @@ div.mainText4
 	margin-left: -200px;
 	text-align: center;
 	padding-top: 10px;
+	margin-bottom: 20px;
 }
 
 div.residence
@@ -168,7 +169,7 @@ input.error,
 select.error
 {
 	border: none;
-	color: #dd4b39;
+	color: #FFCCCC;
 }
 
 .correct
@@ -309,8 +310,8 @@ input.submit
 .submit:hover,
 .submit:focus
 {
-	border: solid 1px red;
-	color: red;
+	border: solid 1px #C5164A;
+	color: #C5164A;
 	outline: none;	
 }
 
