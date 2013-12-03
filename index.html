@@ -43,7 +43,7 @@
 		</div>
 		
 		
-		<div class="mainText2">			
+		<div class="mainText2" style="font-family: 'botonbold_italic'; font-size:20px; color:#C5164A;">			
 				{% if not edit and not errors %}
 					Ti praje bezstarostné Vianoce!
 				{% endif %}
@@ -54,7 +54,7 @@
 		<div class="mainText3">
 				{% if not edit and not errors %}					
 					Aby si videl{% if p.sex=='f' %}a{% endif %}, že to myslíme vážne, <!--postaráme sa o to, aby si naozaj mal{% if p.sex=='f' %}a{% endif %} o jednu starosť menej!-->
-					vyexpedovali sme pre Teba voňavú vianočnú jedličku, ktorú Ti doručíme priamo do obývačky!
+					vyexpedovali sme pre Teba voňavú <span style="font-family: 'botonbold_italic';">vianočnú jedličku</span>, ktorú Ti doručíme priamo do obývačky!
 				{% endif %}				
 		</div>
 		<div class="mainText4">
@@ -82,8 +82,8 @@
 					<div class="date">
 						<select id="date" name="date" class="validate {% if 'date' in errorIds %} error{% endif%}">
 							<option value="" disabled="disabled" selected="selected">Vyber si deň</option>
-							<option value="piatok" {% if p.date == 'piatok' %} selected="selected" {% endif %}>Piatok 20.12</option>
-							<option value="sobota" {% if p.date == 'sobota' %} selected="selected" {% endif %}>Sobota 21.12</option>
+							<option value="piatok" {% if p.date == 'piatok' %} selected="selected" {% endif %}>Piatok 13.12</option>
+							<option value="sobota" {% if p.date == 'sobota' %} selected="selected" {% endif %}>Sobota 14.12</option>
 						</select>
 						<!--<label for="date">Deň doručenia</label>-->
 					</div>
