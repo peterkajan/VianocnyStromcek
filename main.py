@@ -49,15 +49,22 @@ class MainPage(BaseHandler):
         template = JINJA_ENVIRONMENT.get_template('index.html')
         self.response.write(template.render(template_values))
         
+    def getKey(self):
+        keyUrl = self.request.get('key')
+        if not keyUrl:
+            keyUrl = self.session.get('key')
+            
+        if keyUrl:
+            return ndb.Key( urlsafe = keyUrl )
+        else:
+            logging.info('No key in url or session')
+            self.abort(404)
+            
+    
     def get(self):
         #uncomment this to create test client in local repository on get request
         #createTestEmployee()
-        keyUrl = self.request.get('key')
-        logging.info('POST DB Key: ' + keyUrl)
-        if not keyUrl:
-            self.abort(404)
-            
-        key = ndb.Key( urlsafe = keyUrl )
+        key = self.getKey();
         empl = key.get()
         if not empl:
             self.abort(404)
@@ -121,20 +128,9 @@ class MainPage(BaseHandler):
         empl.time = self.request.get('time')
         empl.put()
         logging.info('Data stored succesfully')        
-        query_params = {'key': key.urlsafe()}
-        self.redirect('/?' + urllib.urlencode(query_params))
+        self.redirect('/result')
 
 class LinkPage(BaseHandler):
-    def displayPage(self, params, edit=False, errors=[], errorIds=[]):
-        template_values = {
-            'p': params,
-            'errors': errors,
-            'errorIds': errorIds,
-            'edit' : edit,
-        }
-        template = JINJA_ENVIRONMENT.get_template('index.html')
-        self.response.write(template.render(template_values))
-        
     def get(self):
         out = '\n'
         for emp in Employee.query().fetch():
@@ -143,10 +139,17 @@ class LinkPage(BaseHandler):
             
         logging.info(out);
         self.abort(404)
+        
+class ResultPage(BaseHandler):
+    def get(self):
+        template = JINJA_ENVIRONMENT.get_template('results.html')
+        self.response.write(template.render())
+     
 
 application = webapp2.WSGIApplication([
         ('/', MainPage),
         ('/links', LinkPage),
+        ('/result', ResultPage),
     ], config = sessionConfig)
 
 def main():
