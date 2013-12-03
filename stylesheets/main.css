@@ -33,7 +33,7 @@ body
 	/*background-image: url('../img/bg.png');*/
 	background-repeat:no-repeat;
 	background-position:center top;
-	background-color:#FFFFFF;
+	background-color: white;
 	margin: 0px;
 }
 
@@ -129,6 +129,22 @@ div.mainText4
 	text-align: center;
 	padding-top: 10px;
 	margin-bottom: 20px;
+}
+
+
+div.restext {
+   	position: absolute;
+	left: 50%;
+	top: 70px;
+	z-index: -2;
+	color: darkred;
+	background: transparent;
+	font-family: 'pf_din_text_cond_proXTh';
+	font-size: 25px;
+	width: 130px; 
+	margin-left: -50px;
+	text-align: left;
+	padding-top: 10px;
 }
 
 div.residence
@@ -358,10 +374,7 @@ div.loaderCanvas {
 	cursor: wait;	
 }
 
-.restext h4 {
-    margin-top: 0px;
-    margin-bottom: 8px;
-}
+
 
 .thanks {
 	margin-top:10px;

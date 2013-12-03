@@ -29,10 +29,10 @@
 					</div>
 				{% elif edit %}
 					<div class="thanks">
-						Ďakujeme
+						Zmena údajov
 					</div>
 					<div style="font-family: 'pf_din_text_cond_proXTh'; text-align:center; width:130px; margin-top:10px;">
-						Nižšie si môžeš pozrieť svoje údaje a kedykoľvek ich zmeniť :)						
+						Nižšie si môžeš pozrieť svoje údaje, prípadne ich aj zmeniť :)						
 					</div>
 				{% endif %}
 		</div>		
@@ -79,7 +79,7 @@
 						<!--<label for="phone">Telefónne číslo</label>-->
 					</div>
 					
-					<div class="date">
+					<div class="date" style=''>
 						<select id="date" name="date" class="validate {% if 'date' in errorIds %} error{% endif%}">
 							<option value="" disabled="disabled" selected="selected">Vyber si deň</option>
 							<option value="piatok" {% if p.date == 'piatok' %} selected="selected" {% endif %}>Piatok 13.12</option>
