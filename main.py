@@ -6,7 +6,6 @@ import webapp2
 from model import Employee
 from util import BaseHandler, sessionConfig
 from google.appengine.ext import ndb
-import urllib
 
 
 JINJA_ENVIRONMENT = jinja2.Environment(
@@ -55,7 +54,11 @@ class MainPage(BaseHandler):
             keyUrl = self.session.get('key')
             
         if keyUrl:
-            return ndb.Key( urlsafe = keyUrl )
+            try:
+                return ndb.Key( urlsafe = keyUrl )
+            except (BaseException):
+                logging.exception('Failed to create key: ', keyUrl)
+                self.abort(404)    
         else:
             logging.info('No key in url or session')
             self.abort(404)
@@ -65,9 +68,15 @@ class MainPage(BaseHandler):
         #uncomment this to create test client in local repository on get request
         #createTestEmployee()
         key = self.getKey();
-        empl = key.get()
-        if not empl:
-            self.abort(404)
+        
+        try:
+            empl = key.get()
+            if not empl:
+                logging.error('Employee is None, key: ', key.urlsafe())
+                self.abort(404)
+        except (BaseException):
+            logging.exception('Failed to get employee, key: ', key.urlsafe())
+            self.abort(404)                    
         
         logging.info('GET employee: ' + unicode(empl.firstname) + ' ' + unicode(empl.lastname))
         self.session['key'] = key.urlsafe()
