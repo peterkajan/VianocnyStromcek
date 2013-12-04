@@ -63,7 +63,7 @@ class MainPage(BaseHandler):
     
     def get(self):
         #uncomment this to create test client in local repository on get request
-        #createTestEmployee()
+        createTestEmployee()
         key = self.getKey();
         empl = key.get()
         if not empl:
