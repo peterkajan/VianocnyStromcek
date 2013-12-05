@@ -133,17 +133,14 @@ div.mainText4
 
 
 div.restext {
-   	position: absolute;
-	left: 50%;
-	top: 70px;
-	z-index: -2;
-	color: darkred;
+   	position: relative;
+	margin: auto;
+	color: darkgreen;
 	background: transparent;
 	font-family: 'pf_din_text_cond_proXTh';
 	font-size: 25px;
-	width: 130px; 
-	margin-left: -50px;
-	text-align: left;
+	width: 400px; 
+	text-align: center;
 	padding-top: 10px;
 }
 
@@ -323,9 +320,31 @@ input.submit
 
 } 
 
+input.ressubmit 
+{  
+	
+	position:relative; 
+	display:block;
+	margin-left:auto; 
+	margin-right:auto; 
+	margin-top:40px; 
+	margin-bottom:50px; 
+	text-align:center;
+	font: 30px/100% 'pf_din_text_cond_proXTh', Tahoma, sans-serif;  
+    width: 250px;  
+    height: 50px;
+    background: transparent;
+    border: solid 1px; #853200;
+    color: #853200;
+
+} 
+
+
 
 .submit:hover,
-.submit:focus
+.submit:focus,
+.ressubmit:hover,
+.ressubmit:focus
 {
 	border: solid 1px #C5164A;
 	color: #C5164A;
@@ -377,6 +396,7 @@ div.loaderCanvas {
 
 
 .thanks {
+	text-align: center;
 	margin-top:10px;
 	font-family: 'botonbold_italic';
 	font-size: 25px;
