@@ -57,7 +57,7 @@ class MainPage(BaseHandler):
             try:
                 return ndb.Key( urlsafe = keyUrl )
             except (BaseException):
-                logging.exception('Failed to create key: ', keyUrl)
+                logging.exception('Failed to create key: %s', keyUrl)
                 self.abort(404)    
         else:
             logging.info('No key in url or session')
@@ -72,10 +72,10 @@ class MainPage(BaseHandler):
         try:
             empl = key.get()
             if not empl:
-                logging.error('Employee is None, key: ', key.urlsafe())
+                logging.error('Employee is None, key: %s', key.urlsafe())
                 self.abort(404)
         except (BaseException):
-            logging.exception('Failed to get employee, key: ', key.urlsafe())
+            logging.exception('Failed to get employee, key: %s', key.urlsafe())
             self.abort(404)                    
         
         logging.info('GET employee: ' + unicode(empl.firstname) + ' ' + unicode(empl.lastname))
